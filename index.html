@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo App</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        background-color: #8a4baf;
+      }
+    </style>
+  </head>
+  <body class="py-8 flex justify-center items-center h-screen">
+    <div class="bg-white p-8 rounded shadow-md w-96">
+      <h1 class="text-2xl font-bold mb-4">Todo App</h1>
+
+      <!-- Input box to add task -->
+      <div class="flex justify-center items-center mb-4 gap-3">
+        <input
+          type="text"
+          id="taskInput"
+          class="border rounded py-2 px-3 w-full"
+          placeholder="Add a new task"
+        />
+
+        <!-- Button to add task -->
+        <button
+          class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+          onclick="addTask()"
+        >
+          Add
+        </button>
+      </div>
+
+      <!-- Incomplete tasks -->
+      <div class="mb-4">
+        <h2 class="text-xl font-semibold mb-2">Incomplete Tasks</h2>
+        <div id="incompleteTasks"></div>
+      </div>
+
+      <!-- Completed tasks -->
+      <div>
+        <h2 class="text-xl font-semibold mb-2">Completed Tasks</h2>
+        <div id="completedTasks"></div>
+      </div>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
